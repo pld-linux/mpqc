@@ -21,7 +21,6 @@ BuildRequires:	lapack-devel
 BuildRequires:	libint-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	perl-base
-# check: flex >= 2.5.31, bison >= 1.24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -87,6 +86,7 @@ Statyczna biblioteka MPQC.
 	--enable-shared \
 	--with-cc-optflags="%{rpmcflags}" \
 	--with-cxx-optflags="%{rpmcxxflags}" \
+	--with-flibs="-lgfortran" \
 	--with-sc-includedir=%{_includedir}/mpqc
 # --enable-components (requires cca-chem-config)
 %{__make}
