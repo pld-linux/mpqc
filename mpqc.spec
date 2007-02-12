@@ -2,7 +2,7 @@
 # - mpi support
 # - inter-library linking (if possible at all - cross-dependencies?)
 Summary:	The Massively Parallel Quantum Chemistry Program
-Summary(pl.UTF-8):   Program do równoległych obliczeń z zakresu chemii kwantowej
+Summary(pl.UTF-8):	Program do równoległych obliczeń z zakresu chemii kwantowej
 Name:		mpqc
 Version:	2.3.1
 Release:	1
@@ -50,7 +50,7 @@ zorientowany obiektowo przy użyciu języka C++.
 
 %package devel
 Summary:	Header files for MPQC library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki MPQC
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki MPQC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	blas-devel
@@ -68,7 +68,7 @@ Pliki nagłówkowe biblioteki MPQC.
 
 %package static
 Summary:	Static MPQC library
-Summary(pl.UTF-8):   Statyczna biblioteka MPQC
+Summary(pl.UTF-8):	Statyczna biblioteka MPQC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
