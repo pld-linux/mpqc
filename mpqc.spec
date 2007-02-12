@@ -2,7 +2,7 @@
 # - mpi support
 # - inter-library linking (if possible at all - cross-dependencies?)
 Summary:	The Massively Parallel Quantum Chemistry Program
-Summary(pl):	Program do rÛwnoleg≥ych obliczeÒ z zakresu chemii kwantowej
+Summary(pl.UTF-8):   Program do r√≥wnoleg≈Çych oblicze≈Ñ z zakresu chemii kwantowej
 Name:		mpqc
 Version:	2.3.1
 Release:	1
@@ -31,26 +31,26 @@ architectures ranging from individual workstations to symmetric
 multiprocessors to massively parallel computers. Its design is object
 oriented, using the C++ programming language.
 
-%description -l en
+%description -l en.UTF-8
 MPQC is the Massively Parallel Quantum Chemistry Program. It computes
 properties of atoms and molecules from first principles using the time
-independent Schrˆdinger equation. It runs on a wide range of
+independent Schr√∂dinger equation. It runs on a wide range of
 architectures ranging from individual workstations to symmetric
 multiprocessors to massively parallel computers. Its design is object
 oriented, using the C++ programming language.
 
-%description -l pl
+%description -l pl.UTF-8
 MPQC (Massively Parallel Quantum Chemistry Program) to program do
-rÛwnoleg≥ych obliczeÒ z zakresu chemii kwantowej. Oblicza w≥a∂ciwo∂ci
-atomÛw i cz±steczek z pierwszych zasad przy uøyciu niezaleønego od
-czasu rÛwnania Schrˆdingera. Dzia≥a na wielu architekturach od
+r√≥wnoleg≈Çych oblicze≈Ñ z zakresu chemii kwantowej. Oblicza w≈Ça≈õciwo≈õci
+atom√≥w i czƒÖsteczek z pierwszych zasad przy u≈ºyciu niezale≈ºnego od
+czasu r√≥wnania Schr√∂dingera. Dzia≈Ça na wielu architekturach od
 osobistych stacji roboczych poprzez maszyny wieloprocesorowe SMP do
-komputerÛw do obliczeÒ rÛwnoleg≥ych. Jest zaprojektowany w sposÛb
-zorientowany obiektowo przy uøyciu jÍzyka C++.
+komputer√≥w do oblicze≈Ñ r√≥wnoleg≈Çych. Jest zaprojektowany w spos√≥b
+zorientowany obiektowo przy u≈ºyciu jƒôzyka C++.
 
 %package devel
 Summary:	Header files for MPQC library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki MPQC
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki MPQC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	blas-devel
@@ -63,19 +63,19 @@ Requires:	libstdc++-devel
 %description devel
 Header files for MPQC library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki MPQC.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki MPQC.
 
 %package static
 Summary:	Static MPQC library
-Summary(pl):	Statyczna biblioteka MPQC
+Summary(pl.UTF-8):   Statyczna biblioteka MPQC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static MPQC library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka MPQC.
 
 %prep
