@@ -1,0 +1,11 @@
+--- mpqc-2.3.1/configure.in~	2010-02-25 14:45:29.685199732 +0100
++++ mpqc-2.3.1/configure.in	2010-02-25 14:50:31.284051847 +0100
+@@ -1122,7 +1122,7 @@
+ dnl commented out for Cray X1 (-lsun falsely detected)
+ dnl AC_CHECK_LIB(sun,main)
+ AC_CHECK_LIB(m,main)
+-AC_CHECK_LIB(fl,main)
++dnl AC_CHECK_LIB(fl,main)
+ AC_CHECK_HEADER(perf.h,[
+   AC_CHECK_LIB(perf,perf_set_config,[
+     HAVE_PERF=yes
