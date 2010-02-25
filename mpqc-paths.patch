@@ -1,0 +1,23 @@
+--- mpqc-2.3.1/configure.in~	2006-03-22 19:04:54.000000000 +0100
++++ mpqc-2.3.1/configure.in	2010-02-25 14:45:29.685199732 +0100
+@@ -512,18 +512,8 @@
+ 
+ dnl --------- Need actual paths for substitution outside of a makefile. ---------
+ 
+-if test $exec_prefix = "NONE"; then
+-  if test $prefix = "NONE"; then
+-    scbindir=$ac_default_prefix/bin;
+-    sclibdir=$ac_default_prefix/lib;
+-  else
+-    scbindir=$prefix/bin;
+-    sclibdir=$prefix/lib;
+-  fi
+-else
+-  scbindir=$exec_prefix/bin
+-  sclibdir=$exec_prefix/lib
+-fi
++scbindir="$bindir"
++sclibdir="$libdir"
+ AC_SUBST(scbindir)
+ AC_SUBST(sclibdir)
+ 
