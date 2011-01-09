@@ -121,7 +121,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/scpr
 %attr(755,root,root) %{_bindir}/tkmolrender
 %attr(755,root,root) %{_libdir}/libSC*.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libSC*.so.7
 %attr(755,root,root) %{_libdir}/libmpqc.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libmpqc.so.7
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/%{version}
 %{_datadir}/%{name}/%{version}/basis
