@@ -5,13 +5,15 @@ Summary:	The Massively Parallel Quantum Chemistry Program
 Summary(pl.UTF-8):	Program do równoległych obliczeń z zakresu chemii kwantowej
 Name:		mpqc
 Version:	2.3.1
-Release:	5
+Release:	6
 License:	LGPL/GPL (see LICENSE)
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/mpqc/%{name}-%{version}.tar.bz2
 # Source0-md5:	2f9b4f7487387730d78066a53764f848
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-libfl.patch
+Patch2:		format-security.patch
+Patch3:		cxx11.patch
 URL:		http://www.mpqc.org/
 # -lsB_BLAS ?
 # cca-chem-config (http://www.cca-forum.org/~cca-chem/)
@@ -25,6 +27,8 @@ BuildRequires:	libint-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	perl-base
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		no_install_post_check_so	1
 
 %description
 MPQC is the Massively Parallel Quantum Chemistry Program. It computes
@@ -85,6 +89,8 @@ Statyczna biblioteka MPQC.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
 
 %build
 %{__autoconf}

@@ -1,0 +1,11 @@
+--- mpqc-2.3.1/src/lib/chemistry/qc/mbptr12/transform_tbint.h~	2005-07-12 00:52:34.000000000 +0200
++++ mpqc-2.3.1/src/lib/chemistry/qc/mbptr12/transform_tbint.h	2017-05-25 23:38:32.061627039 +0200
+@@ -61,7 +61,7 @@
+ protected:
+   /** By default, integrals smaller than zero_integral are considered zero.
+       This constant is only used in checking integrals, not computing them. */
+-  static const double zero_integral = 1.0e-12;
++  static constexpr const double zero_integral = 1.0e-12;
+   /// Predefined enumerated type for the MO spaces
+   typedef struct {
+     enum {Space1, Space2, Space3, Space4};

@@ -1,0 +1,11 @@
+--- mpqc-2.3.1/src/lib/chemistry/molecule/atominfo.cc~	2005-02-04 01:51:31.000000000 +0100
++++ mpqc-2.3.1/src/lib/chemistry/molecule/atominfo.cc	2017-05-25 23:30:03.745595718 +0200
+@@ -493,7 +493,7 @@
+   if (iname != symbol_to_Z_.end()) return iname->second;
+ 
+   if (allow_exceptions) {
+-      ExEnv::err0() << sprintf("AtomInfo: invalid name: %s\n",name.c_str());
++      ExEnv::err0() << "AtomInfo: invalid name: " << name << std::endl;
+       throw std::runtime_error("invalid atom name");
+     }
+ 
