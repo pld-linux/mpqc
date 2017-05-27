@@ -8,7 +8,7 @@ Version:	2.3.1
 Release:	6
 License:	LGPL/GPL (see LICENSE)
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/mpqc/%{name}-%{version}.tar.bz2
+Source0:	http://downloads.sourceforge.net/mpqc/%{name}-%{version}.tar.bz2
 # Source0-md5:	2f9b4f7487387730d78066a53764f848
 Patch0:		%{name}-paths.patch
 Patch1:		%{name}-libfl.patch
@@ -26,6 +26,7 @@ BuildRequires:	lapack-devel
 BuildRequires:	libint-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	perl-base
+BuildRequires:	sed >= 4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		no_install_post_check_so	1
@@ -92,12 +93,14 @@ Statyczna biblioteka MPQC.
 %patch2 -p1
 %patch3 -p1
 
+%{__sed} -i -e '1s,/usr/bin/env perl,%{__perl},' src/bin/mpqc/{ccarun,mpqcrun}.in
+
 %build
 %{__autoconf}
 %configure \
 	--enable-shared \
 	--with-cc-optflags="%{rpmcflags}" \
-	--with-cxx-optflags="%{rpmcxxflags}" \
+	--with-cxx-optflags="%{rpmcxxflags} -std=c++11" \
 	--with-flibs="-lgfortran" \
 	--with-sc-includedir=%{_includedir}/mpqc
 # --enable-components (requires cca-chem-config)
