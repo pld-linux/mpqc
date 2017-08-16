@@ -5,7 +5,7 @@ Summary:	The Massively Parallel Quantum Chemistry Program
 Summary(pl.UTF-8):	Program do równoległych obliczeń z zakresu chemii kwantowej
 Name:		mpqc
 Version:	2.3.1
-Release:	7
+Release:	8
 License:	LGPL/GPL (see LICENSE)
 Group:		Libraries
 Source0:	http://downloads.sourceforge.net/mpqc/%{name}-%{version}.tar.bz2
